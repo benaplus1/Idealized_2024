@@ -6,6 +6,7 @@ Benjamin Ascher, Stephen M. Saleeby, Peter J. Marinescu, Susan C. van den Heever
 Department of Atmospheric Science, Colorado State University
 
 2 September 2024
+
 1.Download this repository containing files for setting up the simulations, data analysis, and plotting.
 
 2.Download the latest version of the RAMS model from the GitHub repository here: https://github.com/RAMSmodel/RAMS/releases/tag/v6.3.04.
