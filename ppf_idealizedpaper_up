@@ -1,0 +1,52 @@
+
+#Input File for Post-Processing
+
+RAMS Analysis File folder path
+/moonbow/ascheb/idealized/unipasture-wind/rams_output
+
+Folder in which to put post-processed data
+/moonbow/ascheb/idealized/unipasture-wind/ppfiles_paper
+
+Path to RAMSIN for this simulation
+/moonbow/ascheb/idealized/RAMSINS/RAMSIN.idealized_unipasture_wind
+
+Do you want to process Analysis files or Lite files? Enter *L* for Lite, *A* for Analysis
+A
+
+Type of vertical coordinates to use: Cartesian coordinates, Pressure coordinates, or Sigma coordinates
+Cartesian
+
+If using cartesian or sigma interpolation, the maximum altitude (in meters) you'd like to include in post-processing. leave blank to analyze the whole grid
+10000
+
+If using pressure interpolation, the pressure levels in hPa you'd like the post-processed data on as comma-separated values
+1000, 950, 925, 900, 850, 700, 500
+Analysis start time in YYYY-mm-dd-HHMMSS format
+2022-06-17-060000
+
+Analysis end time in YYYY-mm-dd-HHMMSS format
+2022-06-18-000000
+
+Number of cores to use for post-processing
+12
+
+Grid Number to post-process
+1
+
+List of RAMS variables you'd like to process, as comma-separated entries. Put *all* to process all available variables
+UC,VC,WC,RTP,RV,PI,THETA,TOPT,PATCH,SFLUX_R,SFLUX_T,STOM_RESIST,SOIL_WATER,SOIL_ENERGY,SOIL_TEXT,VEG_LAI,VEG_NDVIC,PATCH_ROUGH,VEG_HEIGHT,VEG_ROUGH,VEG_FRACAREA,SOIL_ROUGH,VEG_ALBEDO,VEG_LAI,VEG_TAI,USTAR,TSTAR,RSTAR,RCP,RRP,RPP,RSP,RAP,LATHEATFRZT,LATHEATVAPT,PATCH_AREA,LEAF_CLASS,VEG_TEMP,CAN_RVAP,CAN_TEMP,PCPRS,PCPRR,ACCPR,RSHORT,RLONG,RLONGUP,ALBEDT
+
+Use the *RAMS* variable names, or *verbose* variable names in post-processed NetCDF files?
+verbose
+
+List of derived variables you'd like to output, as comma-separated entries (a full list of available derived variables is avilable in comments at the top of derivedvars.py). Leave blank to not output any derived quantities. Enter *all* to output all derived quantities available for your output file. Enter *nomomentum* to output all variables except momentum budgets, which are quite slow to calculate
+Temperature,Pressure,SrfPres,SrfTemp,MSLP,MSLT,IceMassMix,LiqMassMix,ThetaV,ThetaRho,TempV,TempRho,Rho,VaporPressure,PWAT,Dewpoint,CloudTopHeight,CloudBaseHeight,CloudTopPressure,CloudBasePressure,LiqSatFrac,IceSatFrac,VertIntIce,VertIntLiq,VertIntCond
+
+If outputting momentum budgets, the number of Y grid points used for horizontal averaging
+20
+
+If outputting momentum budgets, the number of X grid points used for horizontal averaging
+20
+
+If outputting momentum budgets, the type of convolution kernel used for horizontal averaging (documentation is available in derivedvars.py)
+trikernel
